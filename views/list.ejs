@@ -11,15 +11,14 @@
     <h1><%=kindofday%></h1>
     </div>
     <div class="box">
-    <ul>
         <!-- <li><%= newitem%></li> -->
-        <% newitem.forEach((item)=>{%>
-            
-            <li class="item"><input type="checkbox"><p><%=item%></p></li>
-
+        <% newitem.forEach((item)=>{%>  
+            <div class="item">
+                <input type="checkbox">      
+                <p><%=item%></p>
+            </div>   
         <%} ) %>      
-    </ul>
-    <form action="/" method="post" class="box">
+    <form action="/" method="post" class="item">
         <input type="text" name="newitem"placeholder="New item">
         <button type="submit">+</button>
     </form>
