@@ -8,19 +8,18 @@
 </head>
 <body>
     <div id="heading">
-    <h1><%=kindofday%></h1>
+    <h1><%=Listtitle%></h1>
     </div>
     <div class="box">
-        <!-- <li><%= newitem%></li> -->
-        <% newitem.forEach((item)=>{%>  
+        <%for(let i=0;i<items.length;i++){%>  
             <div class="item">
                 <input type="checkbox">      
-                <p><%=item%></p>
+                <p><%=items[i]%></p>
             </div>   
-        <%} ) %>      
+        <%}  %>      
     <form action="/" method="post" class="item">
         <input type="text" name="newitem"placeholder="New item">
-        <button type="submit">+</button>
+        <button type="submit" name="list" value="<%=Listtitle%>">+</button>
     </form>
     </div>
     <footer></footer>
